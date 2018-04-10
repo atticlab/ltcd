@@ -393,8 +393,9 @@ var RegressionNetParams = Params{
 	Bech32HRPSegwit: "tltc", // always tltc for test net
 
 	// Address encoding magics
-	PubKeyHashAddrID: 0x6f, // starts with m or n
-	ScriptHashAddrID: 0xc4, // starts with 2
+	PubKeyHashAddrID:    111,   // 0x6f   starts with m or n
+	// ScriptHashAddrID: 196,   // 0xc4 - Deprecated
+	ScriptHashAddrID:    58,    // 0x3a
 	PrivateKeyID:     0xef, // starts with 9 (uncompressed) or c (compressed)
 
 	// BIP32 hierarchical deterministic extended key magics
@@ -477,11 +478,12 @@ var TestNet4Params = Params{
 	Bech32HRPSegwit: "tltc", // always tb for test net
 
 	// Address encoding magics
-	PubKeyHashAddrID:        0x6f, // starts with m or n
-	ScriptHashAddrID:        0xc4, // starts with 2
+	PubKeyHashAddrID:    111,   // 0x6f   starts with m or n
+	// ScriptHashAddrID: 196,   // 0xc4 - Deprecated
+	ScriptHashAddrID:    58,    // 0x3a
 	WitnessPubKeyHashAddrID: 0x52, // starts with QW
 	WitnessScriptHashAddrID: 0x31, // starts with T7n
-	PrivateKeyID:            0xef, // starts with 9 (uncompressed) or c (compressed)
+	PrivateKeyID:        239,   // 0xef, starts with 9 (uncompressed) or c (compressed)
 
 	// BIP32 hierarchical deterministic extended key magics
 	HDPrivateKeyID: [4]byte{0x04, 0x35, 0x83, 0x94}, // starts with tprv
